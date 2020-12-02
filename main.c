@@ -6,7 +6,7 @@
 #define ALTOMAX 250
 #define C1 3600
 
-void clean_stdin(void)
+void clean_stdin(void) // source: https://stackoverflow.com/questions/17318886/fflush-is-not-working-in-linux
 {
     int c;
     do {
