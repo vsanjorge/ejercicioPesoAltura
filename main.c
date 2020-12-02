@@ -38,8 +38,10 @@ int main(int argc, char *argv[]) {
     printf("\n<S> para continuar (cualquier otra finaliza): ");
     clean_stdin();
     //scanf("%c", &res);
-    res = getchar();
+    res = getchar(); // alternativa al scanf para inputs de tipo char
   } while (res == 'S' || res == 's');
+
+  fclose(logfile);
 
   return 0;
 }
