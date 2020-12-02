@@ -6,6 +6,14 @@
 #define ALTOMAX 250
 #define C1 3600
 
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
+}
+
 int main(int argc, char *argv[]) {
   char res = 'S';
   float peso, altura;
@@ -27,7 +35,7 @@ int main(int argc, char *argv[]) {
     }
 
     printf("\n<S> para continuar (cualquier otra finaliza): ");
-    fflush(stdin);
+    clean_stdin();
     scanf("%c", &res);
     //res = getch();
   } while (res == 'S' || res == 's');
